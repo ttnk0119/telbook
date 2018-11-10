@@ -1,5 +1,6 @@
 <% @page_title = "友達一覧" %>
 <p><%= link_to "add", :new_friend %></p>
+<% if @friend.present? %>
 <table class="attd">
   <% @friends.each do |friend| %>
     <tr>
@@ -10,4 +11,6 @@
     </tr>
   <% end %>
 </table>
-
+<% else %>
+  <p>友達の情報がありません。</p>
+<% end %>
