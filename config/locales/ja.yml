@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      friend: 友達
+      telephone: 電話番号
+    attributes:
+      friend:
+        name: 名前
+      telephone:
+        number: 電話番号
+        cellphone: 携帯電話
