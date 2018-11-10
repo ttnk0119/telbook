@@ -1,11 +1,12 @@
 <% @page_title = "友達一覧" %>
 <p><%= link_to "add", :new_friend %></p>
-<% if @friend.present? %>
+
+<% if @friends.present? %>
 <table class="attd">
   <% @friends.each do |friend| %>
     <tr>
       <td><%= friend.id %></td>
-      <td><%= friend.name %></td>
+      <td><%= link_to friend.name, friend %></td>
       <td><%= link_to "edit", [:edit, friend] %>
       <td><%= link_to "delete", "#" %></td>
     </tr>

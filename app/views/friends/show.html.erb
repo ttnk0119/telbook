@@ -1,0 +1,20 @@
+
+<h2><%= @friend.name %></h2>
+
+<% if @telephones %>
+  <table>
+    <% @telephones.each do |telephone| %>
+      <tr>
+        <td>・</td>
+        <td><%= telephone.number %></td>
+        <td><%= telephone.cellphone %></td>
+        <td><%= link_to "delete", "#" %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>電話番号がありません</p>
+<% end %>
+
+<%= link_to "<<Top", :root %>
+
