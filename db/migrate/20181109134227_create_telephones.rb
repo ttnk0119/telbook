@@ -7,5 +7,7 @@ class CreateTelephones < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index: entries, :friend_id
   end
 end
