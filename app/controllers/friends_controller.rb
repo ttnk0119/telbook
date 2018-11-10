@@ -7,9 +7,11 @@ class FriendsController < ApplicationController
   end
 
   def new
+    @friend = Friend.new
   end
 
   def edit
+    @friend = Friend.find(params[:id])
   end
 
   def create

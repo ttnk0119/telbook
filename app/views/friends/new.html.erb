@@ -1,0 +1,8 @@
+<% @page_title = "友達の新規登録" %>
+
+<%= form_for @friend do |form| %>
+  <%= render "form", form: form %>
+  <%= form.submit %>
+<% end %>
+
+<%= link_to "<<Top", :root %>
