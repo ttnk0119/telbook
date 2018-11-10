@@ -1,0 +1,13 @@
+<% @page_title = "友達一覧" %>
+<p><%= link_to "add", "#" %></p>
+<table class="attd">
+  <% @friends.each do |friend| %>
+    <tr>
+      <td><%= friend.id %></td>
+      <td><%= friend.name %></td>
+      <td><%= link_to "edit", "#" %></td>
+      <td><%= link_to "delete", "#" %></td>
+    </tr>
+  <% end %>
+</table>
+

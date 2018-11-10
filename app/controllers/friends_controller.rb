@@ -1,5 +1,6 @@
 class FriendsController < ApplicationController
   def index
+    @friends = Friend.order("id")
   end
 
   def show
