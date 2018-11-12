@@ -8,7 +8,8 @@
       <td><%= friend.id %></td>
       <td><%= link_to friend.name, friend %></td>
       <td><%= link_to "edit", [:edit, friend] %>
-      <td><%= link_to "delete", "#" %></td>
+      <td><%= link_to "delete", friend, method: :delete,
+        data: { confirm: "本当に削除しますか？" } %></td>
     </tr>
   <% end %>
 </table>
