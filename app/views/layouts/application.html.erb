@@ -12,7 +12,11 @@
     <h1>Telephone Book</h1>
   </div>
   <div id="content">
-    <%= yield %>
+    <% if flash.notice %>
+      <p class="notice"><%= flash.notice %></p>
+    <% end %>
+
+      <%= yield %>
   </div>
 </body>
 </html>
