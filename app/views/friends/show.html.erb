@@ -8,12 +8,20 @@
         <td>・</td>
         <td><%= telephone.number %></td>
         <td><%= telephone.cellphone %></td>
-        <td><%= link_to "delete", "#" %></td>
+        <td><%= link_to "delete", [@friend, telephone], method: :delete,
+        data: { confirm: "本当に削除しますか？" } %></td>
       </tr>
     <% end %>
   </table>
 <% else %>
   <p>電話番号がありません</p>
+<% end %>
+
+<%= form_for @telephone, url: [@friend, @telephone] do |form| %>
+  <%= form.text_field :number, size: 15 %>
+  <%= form.check_box :cellphone %>
+  <%= form.submit %>
+  <%= form.hidden_field :friend_id %>
 <% end %>
 
 <%= link_to "<<Top", :root %>
