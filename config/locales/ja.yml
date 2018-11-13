@@ -9,3 +9,7 @@ ja:
       telephone:
         number: 電話番号
         cellphone: 携帯電話
+  will_paginate:
+    previous_label: "前"
+    next_label: "次"
+

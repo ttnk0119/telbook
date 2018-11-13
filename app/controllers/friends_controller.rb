@@ -1,11 +1,13 @@
 class FriendsController < ApplicationController
   def index
     @friends = Friend.order("id")
+      .paginate(page: params[:page], per_page: 10)
   end
 
   def show
     @friend = Friend.find(params[:id])
     @telephones = @friend.telephones
+      .paginate(page: params[:page], per_page: 10)
     @telephone = Telephone.new(friend_id: @friend)
   end
 
