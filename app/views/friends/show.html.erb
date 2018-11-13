@@ -1,6 +1,7 @@
 
 <h2><%= @friend.name %></h2>
 
+<%= render "shared/errors", obj: @telephone %>
 <% if @telephones %>
   <table>
     <% @telephones.each do |telephone| %>
