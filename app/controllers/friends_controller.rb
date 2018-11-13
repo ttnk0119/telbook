@@ -7,7 +7,7 @@ class FriendsController < ApplicationController
   def show
     @friend = Friend.find(params[:id])
     @telephones = @friend.telephones
-      .paginate(page: params[:page], per_page: 10)
+      .paginate(page: params[:page], per_page: 5)
     @telephone = Telephone.new(friend_id: @friend)
   end
 

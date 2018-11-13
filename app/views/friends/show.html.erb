@@ -14,7 +14,6 @@
       </tr>
     <% end %>
   </table>
-  <%= will_paginate @telephones %>
 <% else %>
   <p>電話番号がありません</p>
 <% end %>
@@ -25,6 +24,8 @@
   <%= form.submit %>
   <%= form.hidden_field :friend_id %>
 <% end %>
+
+  <%= will_paginate @telephones %>
 
 <%= link_to "<<Top", :root %>
 
