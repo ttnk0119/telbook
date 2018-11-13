@@ -7,15 +7,16 @@ class TelephonesController < ApplicationController
       redirect_to friend_path(@friend), notice: "電話番号を追加しました。"
     else
       @telephones = @friend.telephones
-      redirect_to friend_path(@friend)
-      #render "friends/show"
+      #render friend_path(@friend)
+      render "friends/show"
     end
   end
 
   def destroy
+    @friend = Friend.find(params[:friend_id])
     @telephone = Telephone.find(params[:id])
     @telephone.destroy
-    redirect_to "/friends/#{params[:friend_id]}", notice: "電話番号を削除しました"
+    redirect_to friend_path(@friend), notice: "電話番号を削除しました"
   end
     
 
