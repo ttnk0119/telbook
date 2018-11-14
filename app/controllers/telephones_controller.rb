@@ -7,7 +7,7 @@ class TelephonesController < ApplicationController
       redirect_to friend_path(@friend), notice: "電話番号を追加しました。"
     else
       @telephones = @friend.telephones
-      #render friend_path(@friend)
+      .paginate(page: params[:page], per_page: 5)
       render "friends/show"
     end
   end

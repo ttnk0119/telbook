@@ -1,0 +1,20 @@
+/* エラー表示 */
+div#errors {
+  text-align: left;
+  background-color: #fee;
+  border: 1px solid #ecc;
+  padding: 3px 6px;
+  margin: 0 10% 1em;
+
+  h3 {
+    font-size: 90%;
+    color: red;
+    margin: 0 0 4px;
+    border: none;
+  }
+  ul {
+    margin: 0;
+    padding-left: 1.5em;
+  }
+}
+

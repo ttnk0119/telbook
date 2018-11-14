@@ -9,7 +9,7 @@
         <td>・</td>
         <td><%= telephone.number %></td>
         <td><%= telephone.cellphone %></td>
-        <td><%= link_to "delete", [@friend, telephone], method: :delete,
+        <td><%= link_to "delete", [@friend, telephone], :class => "btn delete", method: :delete,
         data: { confirm: "本当に削除しますか？" } %></td>
       </tr>
     <% end %>
@@ -19,7 +19,7 @@
 <% end %>
 
 <%= form_for @telephone, url: [@friend, @telephone] do |form| %>
-  <%= form.text_field :number, size: 15 %>
+  <%= form.text_field :number, size: 15, :placeholder => "name" %>
   <%= form.check_box :cellphone %>
   <%= form.submit %>
   <%= form.hidden_field :friend_id %>

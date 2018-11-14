@@ -31,6 +31,7 @@ div#header {
 
 /* メインコンテンツ */
 div#content {
+    text-align: right;
     padding: 0 50px 50px 50px;
   h2 {
     color: #777;
@@ -42,5 +43,42 @@ div#content {
     font-size: 90%;
     line-height: 1.5;
   }
+
+  a{
+      color: gray;
+  }
+
+  .btn{
+      width: 75px;
+      display: inline-block;
+      padding: 0em 1em;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 3px;
+      text-align: center;
+  }
+  .btn:active{
+      -ms-transform: translateY(4px);
+      -webkit-transform: taranslateY(4px);
+      transform: translateY(4px);
+      border-bottom: none;
+  }
+    .add{
+        background: #47c;
+        border-bottom: solid 4px #27a;
+        padding: 0.5em 1em;
+        font-size: 120%;
+
+    }
+
+      .edit{
+        background: #9ce;
+      border-bottom: solid 4px #7ac;
+      }
+
+      .delete{
+        background: #47c;
+      border-bottom: solid 4px #27a;
+    }
 
 }
