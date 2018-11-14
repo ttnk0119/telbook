@@ -2,7 +2,7 @@
 <h2><%= @friend.name %></h2>
 
 <%= render "shared/errors", obj: @telephone %>
-<% if @telephones %>
+<% if @telephones.count != 0 %>
   <table>
     <% @telephones.each do |telephone| %>
       <tr>
