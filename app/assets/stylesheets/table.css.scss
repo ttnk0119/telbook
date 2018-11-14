@@ -1,0 +1,21 @@
+/* 表：一覧表示、詳細表示 */
+table{
+  border-collapse:collapse;
+  margin: 0 10% auto;
+  max-width: 780px;
+  width: 80%;
+
+
+    td{
+      border-bottom:1px dashed #999;
+      padding:10px 30px;
+    }
+    tr:last-child {
+      border-bottom:3px solid #2e75b6;
+    }
+
+    tr:first-child {
+      border-top:3px solid #2e75b6;
+    }
+
+}

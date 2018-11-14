@@ -8,15 +8,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="header">
-    <h1>Telephone Book</h1>
-  </div>
-  <div id="content">
-    <% if flash.notice %>
-      <p class="notice"><%= flash.notice %></p>
-    <% end %>
+  <div id="container">
+    <div id="header">
+      <h1>Telephone Book</h1>
+    </div>
+    <div id="content">
+      <% if flash.notice %>
+        <p class="notice"><%= flash.notice %></p>
+      <% end %>
 
-      <%= yield %>
+        <%= yield %>
+    </div>
   </div>
 </body>
 </html>
