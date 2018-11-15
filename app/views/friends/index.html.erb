@@ -5,7 +5,7 @@
 <table class="attd">
   <% @friends.each do |friend| %>
     <tr>
-      <td><%= friend.id %></td>
+      <td><%= Friend.where("id <= ?", friend.id).count %></td>
       <td><%= link_to friend.name, friend %></td>
       <td><%= link_to "edit", [:edit, friend], :class => "btn edit" %>
       <td><%= link_to "delete", friend, :class => "btn delete", method: :delete,
