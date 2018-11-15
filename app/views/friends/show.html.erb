@@ -8,7 +8,7 @@
       <tr>
         <td>・</td>
         <td><%= telephone.number %></td>
-        <td><%= telephone.cellphone %></td>
+        <td><%= "cellphone" if telephone.cellphone %></td>
         <td><%= link_to "delete", [@friend, telephone], :class => "btn delete", method: :delete,
         data: { confirm: "本当に削除しますか？" } %></td>
       </tr>
@@ -17,9 +17,9 @@
 <% else %>
   <p>電話番号がありません</p>
 <% end %>
-
+<br>
 <%= form_for @telephone, url: [@friend, @telephone] do |form| %>
-  <%= form.text_field :number, size: 15, :placeholder => "name" %>
+  <%= form.text_field :number, size: 15, :placeholder => "number" %>
   <%= form.check_box :cellphone %>
   <%= form.submit %>
   <%= form.hidden_field :friend_id %>

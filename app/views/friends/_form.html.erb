@@ -1,2 +1,2 @@
 <%= render "shared/errors", obj: @friend %>
-<%= form.label :name %><%= form.text_field :name, size: 10 %>
+<%= form.label "name" if params[:id]%><%= form.text_field :name, size: 10, :placeholder => "name" %>
