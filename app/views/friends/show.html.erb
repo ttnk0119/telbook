@@ -20,8 +20,8 @@
 <br>
 <%= form_for @telephone, url: [@friend, @telephone] do |form| %>
   <%= form.text_field :number, size: 15, :placeholder => "number" %>
-  <%= form.check_box :cellphone %>
-  <%= form.submit %>
+  <%= form.check_box :cellphone %>cellphone
+  <%= form.submit :class => "btn delete" %>
   <%= form.hidden_field :friend_id %>
 <% end %>
 

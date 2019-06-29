@@ -2,7 +2,7 @@
 
 <%= form_for @friend do |form| %>
   <%= render "form", form: form %>
-  <%= form.submit %>
+  <%= form.submit :class=>"btn delete" %>
 <% end %>
 
 <%= link_to "<<Top", :root %>
